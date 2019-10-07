@@ -34,7 +34,7 @@
 #endif
 _GL_INLINE_HEADER_BEGIN
 #ifndef XSIZE_INLINE
-# define XSIZE_INLINE _GL_INLINE
+# define XSIZE_INLINE static inline
 #endif
 
 /* The size of memory objects is often computed through expressions of

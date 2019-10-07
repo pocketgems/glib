@@ -1863,10 +1863,10 @@ glib_conf.set_quoted('GLIB_LOCALE_DIR', join_paths(glib_datadir, 'locale'))
 # libmount is only used by gio, but we need to fetch the libs to generate the
 # pkg-config file below
 libmount_dep = []
-if host_system == 'linux' and get_option('libmount')
-  libmount_dep = [dependency('mount', version : '>=2.23', required : true)]
-  glib_conf.set('HAVE_LIBMOUNT', 1)
-endif
+#if host_system == 'linux' and get_option('libmount')
+  #libmount_dep = [dependency('mount', version : '>=2.23', required : true)]
+  #glib_conf.set('HAVE_LIBMOUNT', 1)
+#endif
 
 if host_system == 'windows'
   winsock2 = cc.find_library('ws2_32')

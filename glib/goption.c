@@ -207,6 +207,7 @@
 #define OPTIONAL_ARG(entry) ((entry)->arg == G_OPTION_ARG_CALLBACK &&  \
                        (entry)->flags & G_OPTION_FLAG_OPTIONAL_ARG)
 
+#undef bool
 typedef struct
 {
   GOptionArg arg_type;
