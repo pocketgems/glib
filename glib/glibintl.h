@@ -36,6 +36,14 @@ const gchar * glib_pgettext (const gchar *msgctxtid,
 #define dngettext(Domain,String1,String2,N) ((N) == 1 ? (String1) : (String2))
 #define bindtextdomain(Domain,Directory) (Domain) 
 #define bind_textdomain_codeset(Domain,Codeset)
+
+static inline ngettext(const char *msgid, const char *msgid_plural, unsigned long n) {
+    if (n != 1) {
+        return msgid_plural;
+    } else {
+        return msgid;
+    }
+}
 #endif
 
 /* not really I18N-related, but also a string marker macro */

@@ -20,7 +20,9 @@
 
 #include <glib.h>
 
+#ifdef ENABLE_NLS
 #include <libintl.h>
+#endif
 #include <string.h>
 
 #define  _(String) gettext (String)
